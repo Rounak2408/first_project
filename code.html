@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Question Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        button {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #db7093;
+        }
+    </style>
+</head>
+<body>
+    <h1>Surprise! 🎉</h1>
+    <p>To unlock your surprise, answer this silly question:</p>
+    <p id="question"></p>
+    <button onclick="generateQuestion()">Get a Silly Question!</button>
+</body>
+    <script>
+        const sillyQuestions = [
+            "If you were a vegetable, what vegetable would you be and why?",
+            "What would be the first rule if you were the ruler of your own country?",
+            "If you could talk to one animal, what animal would it be and what would you ask?",
+            "What’s your secret superhero name and what’s your superpower?",
+            "If you could only eat one food for the rest of your life, but it had to be in the shape of a dinosaur, what would it be?"
+        ];
+
+        function generateQuestion() {
+            const randomIndex = Math.floor(Math.random() * sillyQuestions.length);
+            document.getElementById("question").innerText = sillyQuestions[randomIndex];
+        }
+    </script>
+
+</html>
